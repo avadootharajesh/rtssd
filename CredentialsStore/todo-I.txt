@@ -1,0 +1,4 @@
+a drop down for only 2 things
+profile and logout
+but, the appearance should be like, a normal profile icon, when we click it, the drop down should appear with smooth unfolding
+same icon 

@@ -1,0 +1,119 @@
+.aboutcontainer {
+    margin: 2vh 2vw;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2vh;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid black;
+}
+.nameoftheproject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8vw;
+    padding: 1px 1px;
+}
+.namename {
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 20px 3px 3px 20px;
+    border: 1px solid black;
+    font-size: medium;
+}
+.projectname {
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 3px 20px 20px 3px;
+    border: 1px solid black;
+    font-size: medium;
+    color: white;
+    background-color: black;
+}
+.projectname::selection {
+    background-color: rgb(164, 19, 19);
+    border-radius: 50px;
+}
+
+.aimoftheproject {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+.aimname {
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 20px;
+    width: 5vw;
+    border: 1px solid black;
+    font-size: medium;
+}
+.aimcontent {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: medium;
+    color: black;
+    text-align: justify;
+}
+.aimcontent::selection {
+    background-color: rgb(121, 139, 139);
+    border-radius: 50px;
+}
+
+.objectivesoftheproject {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+.objectivename {
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 20px;
+    width: 8vw;
+    border: 1px solid black;
+    font-size: medium;
+}
+.objectivescontent {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: medium;
+    color: black;
+    text-align: justify;
+    list-style-position: inside;
+    list-style-type: disc;
+    padding: 0 1vw;
+    font-weight: 600;
+}
+
+.usecasesoftheproject {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+.usecasename {
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 20px;
+    width: 8vw;
+    border: 1px solid black;
+    font-size: medium;
+}
+.usecasescontent {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: medium;
+    color: black;
+    text-align: justify;
+    list-style-position: inside;
+    list-style-type: disc;
+    padding: 0 1vw;
+    font-weight: 600;
+}

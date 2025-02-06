@@ -1,0 +1,7 @@
+.CustomNoty {
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid black; /* Add a border */
+    background-color: black; /* Add a background color */
+    padding: 15px; /* Optional padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  }

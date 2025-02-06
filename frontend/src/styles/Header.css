@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "Viafont";
+  src: url("../assets/fonts/Viafont.ttf");
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  gap: 1.5vh;
+  margin: 1.2vh 0.7vw;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 2px 10px;
+}
+
+.headermainline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #beb9b92d;
+  border-radius: 50px;
+  padding: 0 1vw;
+}
+
+.headerlogo {
+  object-fit: contain;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  scale: 0.8;
+}
+
+.headerright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10vw;
+}
+
+.tools {
+  display: flex;
+  scale: 0.8;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 10px;
+  text-decoration: none;
+  cursor: pointer;
+
+  width: fit-content;
+  height: fit-content;
+  padding: 9px 15px;
+
+  background-color: #fff;
+  border-radius: 50px;
+  border: none;
+
+  transition: background-color 0.5s ease;
+
+}
+
+.profile-link:hover {
+  background-color: #000000e5;
+  color: whitesmoke;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 9px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.dropdown-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: column;
+  margin-top: 10px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content.show {
+  display: flex;
+  transform: scaleY(1);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid black;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dividerline {
+  margin-top: 10px;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.pagenamedisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 5px 20px 0 20px;
+  width: fit-content;
+  margin-right: 1.5vw; /* Add top margin to space from header */
+  transition: 0.5s;
+}
+
+.pagename {
+  font-size: medium;
+}
+
+.pagenamedisplay.animate {
+  animation: blinkAnimation 1s ease;
+}
+
+@keyframes blinkAnimation {
+  0% {
+    background-color: #958d8d27;
+    color: black;
+  }
+  50% {
+    background-color: #958d8d27;
+    color: red; /* Change to the color you want for the animation */
+  }
+  100% {
+    background-color: #958d8d27;
+    color: black;
+  }
+}
+
+
+
+.headerrightlink-button {
+  background-color: #e7e4e4;
+  border: none;
+  padding: 5px 10px; 
+  border-radius: 50px;
+}
+
+.headerrightlink {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+}

@@ -1,0 +1,43 @@
+.widgets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+    margin: 2vh 2vw;
+}
+
+.w-full {
+  width: 100vw;
+  height: auto;
+  scale: 0.9;
+}
+
+.tradingview-widget-container {
+  width: 100%; /* Full width of parent container */
+}
+
+.tradingview-widget-container__widget {
+  width: 100%; /* Full width of the widget */
+  height: auto;
+}
+
+.w2 {
+    border: 0px solid black;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.tsw {
+    margin-top: 2.5vh;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.currency-converter {
+    margin-top: 2.5vh;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+
+    
+}

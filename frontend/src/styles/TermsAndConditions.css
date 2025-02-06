@@ -1,0 +1,124 @@
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+}
+
+.terms-heading {
+    font-size: 20px;
+    font-weight:500;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.main-sections-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+}
+
+.terms-section {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: rgb(203, 53, 53);
+}
+
+.terms-section h2 {
+    margin-bottom: 10px;
+}
+
+.terms-section p {
+    margin-bottom: 10px;
+    padding: 2vh 2vw;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.conditions-section {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: rgb(53, 100, 203);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+}
+
+.conditions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+}
+
+.condition-item {
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.guidelines-section {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: rgb(224, 51, 74);
+}
+
+.guidelines-section h2 {
+    margin-bottom: 10px;
+}
+
+.guidelines-section p {
+    margin-bottom: 10px;
+    padding: 2vh 2vw;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+.guidelines-section ul {
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    padding: 2vh 2vw;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.guidelines-section ul li {
+    margin-right: 10px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+.guideline-contact-1 {
+    border-radius: 10px 0 0 10px;
+}
+.guideline-contact-2 {
+    border-radius: 0 0 0 0;
+}
+.guideline-contact-3 {
+    border-radius: 0 10px 10px 0;
+}

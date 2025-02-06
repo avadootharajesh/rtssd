@@ -1,0 +1,145 @@
+.contactcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    margin: 8vh 3vw;
+    gap: 5vh;
+}
+.leftdivforcontact-developerdetailsandrating {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.developerdetailsdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1vh;
+}
+.developerdetailsheading {
+    padding-left: 1vw;
+}
+.developerdetailscontent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 1vw;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid black;
+}
+.developerdetailscomponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    padding: 1vh 1vw;
+}
+.designation {
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 20px 3px 3px 20px;
+    border: 1px solid black;
+    font-size: medium;
+}
+.name {
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid black;
+    font-size: medium;
+    background-color: black;
+    color: white;
+}
+.mail {
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 3px 20px 20px 3px;
+    border: 1px solid black;
+    font-size: medium;
+}
+
+.ratingstarsdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    gap: 0.5vh;
+    padding: 1vh 1vw;
+    margin: 0 -2vw;
+    width: 20vw;
+    scale: 0.8;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.star {
+    font-size: 2rem; /* Adjust size as needed */
+    color: #ffc107; /* Color of the filled stars */
+    transition: color 0.2s;
+}
+
+.starscontainer {
+    scale: 0.8;
+    margin-left: -1vw;
+}
+
+.star:hover {
+    color: #ffca28; /* Color when hovered */
+}
+.rightdivforcontact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.contactformcontactheading {
+    padding-right: 1vw;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 3vh;
+    padding: 1vh 1vw;
+    width: 40vw;
+}
+
+.contactformtextarea {
+    resize: none;
+    padding: 1.5vh 1vw;
+    border-radius: 15px 15px 15px 15px;
+    border: 1px solid black;
+    width: 30vw;
+    height: 20vh;
+    font-size: large;
+}
+
+.contactformsendbutton {
+    padding: 1vh 1vw;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contactformsendbutton:hover {
+    transform: translateX(-0.5vw);
+}
+.contactformsendbutton:active {
+    scale: 1.2;
+}
+

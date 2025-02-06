@@ -1,0 +1,87 @@
+@font-face {
+    font-family: TheBoldFont;
+    src: url("../assets/fonts/Fontspring-DEMO-vanguardcf-bold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Chillax;
+    src: url("../assets/fonts/Chillax-Semibold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Carbonic;
+    src: url("../assets/fonts/POICarbonicTrial-SemiBold-BF6674f45a3899f.otf");
+
+}
+
+.homecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 2vw;
+    padding: 0.5vh 0.8vw;
+    height: 60vh;
+    width: 90vw;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.titlecard {
+    user-select: none;
+    font-family: TheBoldFont;
+    font-size: 50px;
+    font-weight: 900;
+    color: black;
+}
+.line {
+    width: 50vw;
+    height: 0.6px;
+    background-color: black;
+    margin: 1vh 0;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    width: 20vw;
+    height: 6vh;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.socialsheading {
+    text-align: center;
+    font-family: TheBoldFont;
+    font-size: 20px;
+    padding-top: 15px;
+    user-select: none;
+}
+
+.socialsicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid black;
+    color: black;
+    padding: 1px 1px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.socialsicon:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+}

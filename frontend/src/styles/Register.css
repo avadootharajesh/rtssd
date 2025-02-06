@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/Poppins.ttf");
+}
+
+/* IOS SWEET ALERT */
+
+/* Override Noty sunset theme styles to include rounded corners */
+.noty_theme_sunset {
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Optional: Adjust padding if needed */
+}
+
+.noty_theme_sunset .noty_body {
+    border-radius: 15px; /* Ensure body content also has rounded corners */
+}
+
+.noty_theme_sunset .noty_close {
+    border-radius: 50%; /* Optional: Make close button round */
+}
+
+/* Additional customization if needed */
+.noty_theme_sunset .noty_bar {
+    border-radius: 15px; /* Apply rounded corners to the bar */
+}
+
+
+/* IOS SWEET ALERT END */
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vh;
+}
+.register-heading {
+  font-size: 23px;
+  padding: 1.5vh 4.5vw;
+  border-radius: 50px;
+  border: 1px solid black;
+  border-color: transparent;
+  background-color: #c0b8b830;
+}
+.register-form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  padding: 2vh 3vw;
+  border-radius: 20px 20px 20px 20px;
+  border: 1px solid black;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+.names-of-the-person-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  font-family: Poppins;
+}
+.registername {
+  font-family: Poppins;
+}
+.mail-div-register {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2vh;
+}
+.mobilenumber-div-register {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2vh;
+}
+.emailinputregister {
+  width: 40%;
+}
+.mobilenumberinputregister {
+  width: 40%;
+}
+.username-div-register {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2vh;
+}
+.password-and-passcode-div-register {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2vh;
+}
