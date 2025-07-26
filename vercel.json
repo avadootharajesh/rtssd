@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "frontend",
+      "src": "frontend",
+      "buildCommand": "npm install && npm run build",  
+      "outputDirectory": "frontend/build",  
+      "installCommand": "npm install",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "functions": {
+        "api/**.js": {
+          "runtime": "nodejs14.x"  
+        }
+      }
+    },
+    {
+      "name": "backend",
+      "src": "backend",
+      "buildCommand": "npm install",  
+      "installCommand": "npm install",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "functions": {
+        "api/**.js": {
+          "runtime": "nodejs14.x"  
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "rtssd-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,6 +37,7 @@
   },
   "proxy": "https://localhost:5000",
   "scripts": {
+    "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
