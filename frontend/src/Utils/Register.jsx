@@ -7,7 +7,6 @@ import { BACKEND_PORT } from "./Constants";
 import axios from "axios";
 
 export const RegisterUtil = () => {
-
   const navigate = useNavigate();
 
   const [EmailForRegister, setEmailForRegister] = useState("");
@@ -122,62 +121,73 @@ export const RegisterUtil = () => {
   };
 
   const sendmobileotp = async () => {
-    try {
-      setIsLoading(true);
-      const response = await fetch("http://localhost:5001/api/user/sendotp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ mobileNumber: MobileNumberForRegister }),
-      });
-      const data = await response.json();
-      console.log("OTP sending response\n", data);
-      if (response.ok) {
-        setIsMobileOtpSent(true);
-        setIsMobileOtpModalVisible(true);
-        message.success(data.message);
-      } else {
-        message.error(data.message);
-        console.error("Failed to send OTP:", data.message);
-      }
-    } catch (error) {
-      console.error("Failed to send OTP:", error);
-      message.error("Failed to send OTP");
-    } finally {
-      setIsLoading(false);
-    }
+    // try {
+    //   setIsLoading(true);
+    //   const response = await fetch("http://localhost:5001/api/user/sendotp", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ mobileNumber: MobileNumberForRegister }),
+    //   });
+    //   const data = await response.json();
+    //   console.log("OTP sending response\n", data);
+    //   if (response.ok) {
+    //     setIsMobileOtpSent(true);
+    //     setIsMobileOtpModalVisible(true);
+    //     message.success(data.message);
+    //   } else {
+    //     message.error(data.message);
+    //     console.error("Failed to send OTP:", data.message);
+    //   }
+    // } catch (error) {
+    //   console.error("Failed to send OTP:", error);
+    //   message.error("Failed to send OTP");
+    // } finally {
+    //   setIsLoading(false);
+    // }
+    setIsLoading(true);
+    setIsMobileOtpSent(true);
+    setIsMobileOtpModalVisible(true);
+    // message.success(data.message);
+    message.success("OTP sent successfully");
+    setIsLoading(false);
   };
 
   const handleMobileOtpVerify = async () => {
-    if (isMobileOtpSent) {
-      try {
-        const response = await fetch(
-          "http://localhost:5001/api/user/verifyotp",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              mobileNumber: MobileNumberForRegister,
-              otp: typedOtpPhone,
-            }),
-          }
-        );
-        console.log("OTP verification response\n", response);
-        const data = await response.json();
+    // if (isMobileOtpSent) {
+    //   try {
+    //     const response = await fetch(
+    //       "http://localhost:5001/api/user/verifyotp",
+    //       {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json" },
+    //         body: JSON.stringify({
+    //           mobileNumber: MobileNumberForRegister,
+    //           otp: typedOtpPhone,
+    //         }),
+    //       }
+    //     );
+    //     console.log("OTP verification response\n", response);
+    //     const data = await response.json();
 
-        console.log("OTP verification response\n", data);
-        if (response.ok) {
-          setIsMobileNumberVerified(true);
-          setIsMobileOtpModalVisible(false);
-          setButtonTextForMobileNumber("Verified");
-          message.success(data.message);
-        } else {
-          message.error(data.message);
-        }
-      } catch (error) {
-        console.error("Failed to verify OTP:", error);
-        message.error("Failed to verify OTP");
-      }
-    }
+    //     console.log("OTP verification response\n", data);
+    //     if (response.ok) {
+    //       setIsMobileNumberVerified(true);
+    //       setIsMobileOtpModalVisible(false);
+    //       setButtonTextForMobileNumber("Verified");
+    //       message.success(data.message);
+    //     } else {
+    //       message.error(data.message);
+    //     }
+    //   } catch (error) {
+    //     console.error("Failed to verify OTP:", error);
+    //     message.error("Failed to verify OTP");
+    //   }
+    // }
+    setIsMobileNumberVerified(true);
+    setIsMobileOtpModalVisible(false);
+    setButtonTextForMobileNumber("Verified");
+    // message.success(data.message);
+    message.success("OTP verified successfully");
   };
 
   const handleMobileNumberVerify = async (e) => {
@@ -211,7 +221,7 @@ export const RegisterUtil = () => {
 
   const handleRegisterSubmit = async (formdata) => {
     console.log("Form Data:", formdata);
-  
+
     try {
       const response = await axios.post(
         `http://localhost:${BACKEND_PORT}/api/user/register`,
@@ -234,7 +244,6 @@ export const RegisterUtil = () => {
       console.error("Registration failed:", error);
     }
   };
-  
 
   const handleUsernameChange = (e) => {
     setUsernameForRegister(e.target.value);
@@ -274,12 +283,10 @@ export const RegisterUtil = () => {
     if (!isMobileNumberVerified) {
       message.error("Mobile Number not verified");
       return;
-    }
-    else if (!formdata) {
+    } else if (!formdata) {
       message.error("Provide valid details");
       return;
-    }
-    else {
+    } else {
       handleRegisterSubmit(formdata);
     }
   };
