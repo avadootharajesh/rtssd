@@ -1,34 +1,26 @@
 {
   "version": 2,
-  "projects": [
+  "builds": [
     {
-      "name": "frontend",
-      "src": "frontend",
-      "buildCommand": "npm install && npm run build",  
-      "outputDirectory": "frontend/build",  
-      "installCommand": "npm install",
-      "env": {
-        "NODE_ENV": "production"
-      },
-      "functions": {
-        "api/**.js": {
-          "runtime": "nodejs14.x"  
-        }
+      "src": "frontend/package.json",
+      "use": "@vercel/node",            
+      "config": {
+        "distDir": "frontend/build"    
       }
     },
     {
-      "name": "backend",
-      "src": "backend",
-      "buildCommand": "npm install",  
-      "installCommand": "npm install",
-      "env": {
-        "NODE_ENV": "production"
-      },
-      "functions": {
-        "api/**.js": {
-          "runtime": "nodejs14.x"  
-        }
-      }
+      "src": "backend/package.json",   
+      "use": "@vercel/node"            
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/$1"  
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/$1"  
     }
   ]
 }
