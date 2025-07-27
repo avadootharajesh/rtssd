@@ -58,7 +58,7 @@ export const RegisterUtil = () => {
     try {
       // Step 1: Send the email
       const sendMailResponse = await fetch(
-        `http://localhost:${BACKEND_PORT}/api/user/sendmail`,
+        `${process.env.BACKEND}/api/user/sendmail`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -92,7 +92,7 @@ export const RegisterUtil = () => {
     if (mailsent) {
       try {
         const verifyResponse = await fetch(
-          `http://localhost:${BACKEND_PORT}/api/user/verifymail`,
+          `${process.env.BACKEND}/api/user/verifymail`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -224,7 +224,7 @@ export const RegisterUtil = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:${BACKEND_PORT}/api/user/register`,
+        `${process.env.BACKEND}/api/user/register`,
         formdata,
         {
           withCredentials: true, // Include cookies

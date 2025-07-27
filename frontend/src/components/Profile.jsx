@@ -11,7 +11,7 @@ const BACKEND_PORT = process.env.REACT_APP_BACKEND_PORT;
 async function getAuthKey() {
   try {
 
-    const response = await fetch(`http://localhost:5001/api/user/authkey`, {
+    const response = await fetch(`${process.env.BACKEND}/api/user/authkey`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

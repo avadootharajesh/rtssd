@@ -20,7 +20,7 @@ const MultipleLogin = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:${BACKEND_PORT}/api/user/login`,
+        `${process.env.BACKEND}/api/user/login`,
         {
           email: values.email,
           selectedMethod : selectedMethod,
