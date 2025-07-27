@@ -23,6 +23,10 @@ app.use(cors(
   {
     origin: "http://localhost:5000",
     credentials: true,
+  },
+  {
+    origin: "https://artssd.onrender.com/",
+    credentials: true,
   }
 ));
 app.use(bodyparser.urlencoded({ extended: true }));

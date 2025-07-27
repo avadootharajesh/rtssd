@@ -6,7 +6,8 @@ import FetchUser from "../Utils/FetchUser";
 
 import "../styles/Profile.css";
 
-const BACKEND_PORT = process.env.REACT_APP_BACKEND_PORT;
+const BACKEND_PORT = process.env.BACKEND;
+console.log(BACKEND_PORT);
 
 async function getAuthKey() {
   try {
