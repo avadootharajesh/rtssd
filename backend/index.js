@@ -19,6 +19,7 @@ const cors = require("cors");
 dotenv.config();
 app.use(express.json());
 app.use(cookieParser());
+// for deplyment too
 app.use(cors(
   {
     origin: "http://localhost:5000",
