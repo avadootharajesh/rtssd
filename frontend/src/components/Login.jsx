@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Input, Radio, Button, message } from "antd";
 import "../styles/Login.css"; // Import your CSS file
 import axios from "axios";
-import { BACKEND_PORT } from "../Utils/Constants";
+// import { BACKEND_PORT } from "../Utils/Constants";
 import { useNavigate } from "react-router-dom";
 
 const MultipleLogin = () => {
@@ -20,7 +20,7 @@ const MultipleLogin = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.BACKEND}/api/user/login`,
+        `${process.env.REACT_APP_BACKEND}/api/user/login`,
         {
           email: values.email,
           selectedMethod : selectedMethod,

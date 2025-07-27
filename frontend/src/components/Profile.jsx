@@ -6,13 +6,13 @@ import FetchUser from "../Utils/FetchUser";
 
 import "../styles/Profile.css";
 
-const BACKEND_PORT = process.env.BACKEND;
+const BACKEND_PORT = process.env.REACT_APP_BACKEND;
 console.log(BACKEND_PORT);
 
 async function getAuthKey() {
   try {
 
-    const response = await fetch(`${process.env.BACKEND}/api/user/authkey`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND}/api/user/authkey`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

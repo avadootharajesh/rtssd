@@ -2,7 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Form, Input, Button, message } from "antd";
-import { BACKEND_PORT } from "./Constants";
+
+
+// import { REACT_APP_BACKEND_PORT } from "./Constants";
 
 import axios from "axios";
 
@@ -58,7 +60,7 @@ export const RegisterUtil = () => {
     try {
       // Step 1: Send the email
       const sendMailResponse = await fetch(
-        `${process.env.BACKEND}/api/user/sendmail`,
+        `${process.env.REACT_APP_BACKEND}/api/user/sendmail`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -92,7 +94,7 @@ export const RegisterUtil = () => {
     if (mailsent) {
       try {
         const verifyResponse = await fetch(
-          `${process.env.BACKEND}/api/user/verifymail`,
+          `${process.env.REACT_APP_BACKEND}/api/user/verifymail`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -221,10 +223,13 @@ export const RegisterUtil = () => {
 
   const handleRegisterSubmit = async (formdata) => {
     console.log("Form Data:", formdata);
+    console.log("Backend Hello:");
+    console.log("Backend Hello:", process.env.REACT_APP_BACKEND);
 
     try {
+      console.log("Form Data:", formdata);
       const response = await axios.post(
-        `${process.env.BACKEND}/api/user/register`,
+        `${process.env.REACT_APP_BACKEND}/api/user/register`,
         formdata,
         {
           withCredentials: true, // Include cookies
